@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html th:fragment="layout(main)" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap/css/bootstrap.min.css"
+          th:href="@{/css/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="../../static/css/app.css"
+          th:href="@{/css/app.css}">
+</head>
+<body>
+<section>
+    <head>
+        <div class="container">
+            <img id="logo" src="../../static/images/logo.png" th:src="@{/images/logo.png}" alt="images">
+            <img id="logoText" src="../../static/images/logoText.png" th:src="@{/images/logoText.png}" alt="images">
+            <img id="stalk" src="../../static/images/stalk.png" th:src="@{/images/stalk.png}" class="figure-img"
+                 alt="images">
+        </div>
+    </head>
+</section>
+<section>
+    <div th:replace="${main}"></div>
+</section>
+<footer class="bg-dark text-white mt-5 p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="lead text-center">CopyRight &copy; 2023 Blogen</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

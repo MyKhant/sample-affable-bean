@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html th:replace="layout/mainLayout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-3 text-center text-white">
+                <div>
+                    <h3 class="bg-button text-white"><a style="color: white!important;text-decoration: none!important;"
+                                                        th:href="@{'/product/products?id=1'}"><h3>Diary</h3></a></h3>
+                    <h3 class="bg-button text-white"><a style="color: white!important;text-decoration: none!important;"
+                                                        th:href="@{'/product/products?id=2'}"><h3>Meats</h3></a></h3>
+                    <h3 class="bg-button text-white"><a style="color: white!important;text-decoration: none!important;"
+                                                        th:href="@{'/product/products?id=3'}"><h3>Bakery</h3></a></h3>
+                    <h3 class="bg-button text-white"><a style="color: white!important;text-decoration: none!important;"
+                                                        th:href="@{'/product/products?id=4'}"><h3>Fruit &amp; veg</h3>
+                    </a></h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="pr : ${products}">
+                        <td><img src="../static/images/products" th:src="@{'/images/products/'+${pr.name}+.png}" alt=""
+                                 class="img-thumbnail"></td>
+                        <td th:text="${pr.name}"></td>
+                        <td th:text="${pr.price}"></td>
+                        <td><a href="#" class="btn btn-success">purchase</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

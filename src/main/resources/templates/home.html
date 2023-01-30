@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html th:replace="layout/mainLayout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi fugit nesciunt vitae voluptatum. Cupiditate dolorum possimus quaerat? Maiores, sit!</h3>
+                <br>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur possimus reprehenderit!</p>
+            </div>
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <a th:href="@{'/product/products?id=1'}">
+                            <img src="../static/images/categories/dairy.jpg" th:src="@{/images/categories/dairy.jpg}" class="img-fluid" alt="" >
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a th:href="@{'/product/products?id=2'}">
+                            <img src="../static/images/categories/meats.jpg" th:src="@{/images/categories/meats.jpg}" class="img-fluid" alt="" >
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a th:href="@{'/product/products?id=3'}">
+                            <img src="../static/images/categories/bakery.jpg" th:src="@{/images/categories/bakery.jpg}" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a th:href="@{'/product/products?id=4'}">
+                            <img src="../static/images/categories/fruitveg.jpg" th:src="@{/images/categories/fruitveg.jpg}" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
